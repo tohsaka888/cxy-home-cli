@@ -1,0 +1,70 @@
+## 使用
+
+### 前置条件
+
+- 安装了`node.js`,版本`>=16`
+- 全局安装了`pnpm`
+- 全局安装了`vercel`
+
+`可选`
+
+- 全局安装[`concurrently`](https://www.npmjs.com/package/concurrently)
+
+### Step1
+
+clone 本项目
+
+```bash
+git clone https://github.com/tohsaka888/cxy-home-cli.git
+```
+
+进入项目目录
+
+```bash
+cd ./cxy-home-cli
+```
+
+安装依赖
+
+```bash
+pnpm install
+```
+
+### Step2
+
+clone 程序员之家项目所有模块
+
+```bash
+git clone https://github.com/tohsaka888/cxy-home-login.git
+git clone https://github.com/tohsaka888/cxy-home-competition.git
+git clone https://github.com/tohsaka888/cxy-home
+git clone https://github.com/tohsaka888/cxy-home-activity
+```
+
+### Step3
+
+安装所有模块依赖
+
+```bash
+pnpm preinstall
+```
+
+### Step4
+
+dev环境开发
+
+```bash
+pnpm alldev
+```
+
+构建生产版本
+
+```bash
+pnpm allbuild
+```
+
+启动生产环境
+
+```bash
+pnpm allstart
+```
