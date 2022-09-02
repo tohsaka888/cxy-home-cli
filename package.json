@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx concurrently \"cd ./cxy-home && pnpm install\" \"cd ./cxy-home-competition && pnpm install\" \"cd ./cxy-home-activity && pnpm install\" \"cd ./cxy-home-login && pnpm install\"",
-    "alldev": "npx concurrently \"cd ./cxy-home && pnpm dev\" \"cd ./cxy-home-activity && PORT=3001 pnpm dev\" \"cd ./cxy-home-competition && PORT=3002 pnpm dev\" \"cd ./cxy-home-login && PORT=3003 pnpm dev\"",
+    "alldev": "npx concurrently \"cd ./cxy-home && pnpm dev\" \"cd ./cxy-home-activity && pnpm dev -p 3001\" \"cd ./cxy-home-competition && pnpm dev -p 3002\" \"cd ./cxy-home-login && pnpm dev -p 3003\"",
     "allbuild": "npx concurrently \"cd ./cxy-home && pnpm build\" \"cd ./cxy-home-activity && pnpm build\" \"cd ./cxy-home-competition && pnpm build\" \"cd ./cxy-home-login && pnpm build\"",
-    "allstart": "pnpm allbuild && npx concurrently \"cd ./cxy-home && pnpm dev\" \"cd ./cxy-home-activity && PORT=3001 pnpm dev\" \"cd ./cxy-home-competition && PORT=3002 pnpm dev\" \"cd ./cxy-home-login && PORT=3003 pnpm dev\""
+    "allstart": "pnpm allbuild && npx concurrently \"cd ./cxy-home && pnpm dev\" \"cd ./cxy-home-activity && pnpm dev -p 3001\" \"cd ./cxy-home-competition && pnpm dev -p 3002\" \"cd ./cxy-home-login && pnpm dev -p 3003\""
   },
   "keywords": [],
   "author": "",
